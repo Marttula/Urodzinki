@@ -1,48 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zapraszam na urodzinową kawkę</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      overflow: hidden;
-    }
-    iframe {
-      display: block;
-      width: 100vw;
-      height: 100vh;
-      border: none;
-      z-index: 1;
-      position: relative;
-    }
-    .player {
-      position: absolute;
-      bottom: 15px;
-      left: 15px;
-      z-index: 2;
-      width: 300px;
-      height: 80px;
-      opacity: 0.9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Urodzinki</title>
 </head>
-<body>
-  <!-- Mapa Google -->
-  <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1HqvpJJAcQOFQypgm4c75nCJClR59g8E&ehbc=2E312F" allowfullscreen></iframe>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f8f8f8;">
 
-  <!-- Odtwarzacz SoundCloud -->
-  <div class="player">
+    <h1>Witaj na swojej urodzinowej stronie!</h1>
+    <p>To tylko mała niespodzianka…</p>
+
     <iframe 
-      width="100%" 
-      height="100" 
-      scrolling="no" 
-      frameborder="no" 
-      allow="autoplay" 
-      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-956334953/dont-panic-coldplay&color=%23ff5500&auto_play=true&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
+        src="https://www.google.com/maps/d/u/1/embed?mid=1HqvpJJAcQOFQypgm4c75nCJClR59g8E&ehbc=2E312F" 
+        width="640" height="480" style="border: 0;">
     </iframe>
-  </div>
+
+    <div style="margin-top: 30px;">
+        <button onclick="playMusic()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+            Kliknij, żeby włączyć Coldplaya
+        </button>
+        <div id="player" style="margin-top: 20px;"></div>
+    </div>
+
+    <script>
+        function playMusic() {
+            const player = document.getElementById('player');
+            player.innerHTML = `<iframe width="100%" height="166" scrolling="no" frameborder="no" 
+                allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-956334953/dont-panic-coldplay&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>`;
+        }
+    </script>
+
 </body>
 </html>
