@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moja Mapa + Muzyka</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    iframe.map {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+    .music {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      z-index: 10;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Mapa Google -->
+  <iframe class="map" src="https://www.google.com/maps/d/u/1/embed?mid=1HqvpJJAcQOFQypgm4c75nCJClR59g8E&ehbc=2E312F"></iframe>
+
+  <!-- Muzyka (SoundCloud player) -->
+  <div class="music">
+    <iframe 
+      width="300" 
+      height="80" 
+      scrolling="no" 
+      frameborder="no" 
+      allow="autoplay" 
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/53238180&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+    </iframe>
+  </div>
+</body>
+</html>
